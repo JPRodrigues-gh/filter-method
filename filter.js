@@ -69,17 +69,17 @@ const students = [
 // console.log(candidates);
 
 // Version 2
-// const hasStrongSkills = student => {
-//   let strongSkills = student.skills.filter(skill => skill.yrsExperience >= 5);
-//   return strongSkills.length > 0;
-// }
-// const candidates = students.filter(hasStrongSkills);
-// console.log(candidates);
-
-// Version 3
-const has5YearsExperience = skill => skill.yrsExperience >= 5;
-const hasStrongSkills = student => student.skills.filter(has5YearsExperience).length > 0;
+const hasStrongSkills = student => {
+  let strongSkills = student.skills.filter(skill => skill.yrsExperience >= 5);
+  return strongSkills.length > 0;
+}
 const candidates = students.filter(hasStrongSkills);
 console.log(candidates);
-const candidatesNames = candidates.map(student => [student.name]);
-console.log(candidatesNames);
+
+// Version 3
+// const has5YearsExperience = skill => skill.yrsExperience >= 5;
+// const hasStrongSkills = student => student.skills.filter(has5YearsExperience).length > 0;
+// const candidates = students.filter(hasStrongSkills);
+// console.log(candidates);
+// const candidatesNames = candidates.map(student => [student.name]);
+// console.log(candidatesNames);
